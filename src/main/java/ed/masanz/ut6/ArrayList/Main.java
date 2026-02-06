@@ -3,6 +3,8 @@ package ed.masanz.ut6.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import ed.masanz.ut6.ArrayList.controller.ProyController;
+
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.rendering.template.JavalinFreemarker;
@@ -22,16 +24,7 @@ public class Main {
             config.fileRenderer(new JavalinFreemarker());
         }).start(8080);
 
-//        app.get("/", NotaController::servirIndice);
-//        app.get("/lista-notas", NotaController::servirLista);
-//        app.get("/nota/{id}", NotaController::servirNota);
-//        app.get("/crea-nota", NotaController::servirCrearNota);
-//        app.post("/crea-nota", NotaController::crearNota);
-//        app.get("/edita-nota/{id}", NotaController::servirEditarNota);
-//        app.post("/edita-nota/{id}", NotaController::editarNota);
-//        app.get("/elimina-nota/{id}", NotaController::servirEliminarNota);
-//        app.post("/elimina-nota/{id}", NotaController::eliminarNota);
-//        app.get("/error", NotaController::servirError);
+        app.get("/", ProyController::prueba);
 
     }
 
