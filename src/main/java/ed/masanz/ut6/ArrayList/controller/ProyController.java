@@ -28,7 +28,7 @@ public class ProyController {
 
         Item item2 = new Item("Estuche",2,2);
         List<Puja> pujas2 = new ArrayList<>();
-        pujas1.add(new Puja(2,"Estuche",3,"Alba",2));
+        pujas2.add(new Puja(2,"Estuche",3,"Alba",2));
         ItemPujas itemPujas2 = new ItemPujas();
         itemPujas2.setItem(item2);
         itemPujas2.setPujas(pujas2);

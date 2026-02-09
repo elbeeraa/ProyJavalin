@@ -1,0 +1,9 @@
+table {
+  /* Une los bordes de las celdas en una sola línea */
+  border-collapse: collapse;
+}
+
+table, th, td {
+  /* Define el grosor, estilo (sólido) y color de la línea */
+  border: 1px solid black;
+}

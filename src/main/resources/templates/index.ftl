@@ -7,19 +7,24 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Usuario</th>
-            <th>Puja</th>
-        </tr>
-    <#list pujas as puja>    
-        <tr>
-            <td>${puja.nombreItem}</td>
-            <td>${puja.nombreUsuario}</td>
-            <td>${puja.precioPujado}</td>
-        </tr>
-     </#list>
-    </table>
+    <h1>LISTADO DE PUJAS</h1>
+    <#list itemPujasList as itempujas>
+        <h2>[${itempujas.getItem().getId()}] ${itempujas.getItem().getNombre()}</h2>
+        <p>Precio inicial: ${itempujas.getItem().getPrecio()} €</p>
+        <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Puja</th>
+                </tr>
+            <#list itempujas.getPujas() as puja>
+                <tr>
+                    <td>${puja.idUsuario}</td>
+                    <td>${puja.nombreUsuario}</td>
+                    <td>${puja.precioPujado} €</td>
+                </tr>
+             </#list>
+        </table>
+    </#list>
 </body>
 </html>
